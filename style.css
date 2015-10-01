@@ -1,0 +1,93 @@
+body {
+    font-family: arial, sans-serif;
+}
+
+h1 {	display:block;
+	padding:0 35px 0 35px;
+	font-size:23px;
+	color:#214287;
+}
+
+.container {
+	width:1024px;
+    padding:5px;
+    margin:auto;
+}
+
+.inner {	width:700px;
+	border:1px solid #CCC;
+    padding:0px;
+    margin:auto;
+}
+
+.row {
+    padding:15px 35px 15px 35px;
+    border-top:1px dashed #CCC;
+}
+
+label {	color:#214287;
+    display:block;
+    font-weight:bold;
+    padding:0 0 5px 0;
+    font-size:15px;
+}
+
+.row input[type='text'], input[type='password'], textarea {	padding:2px;
+	width:350px;
+	border:1px solid #3567CE;
+}
+
+.row textarea {
+	height:50px;
+}
+
+.row select {
+	padding:1px;
+	border:1px solid #3567CE;
+}
+
+i {	display:inline-block;
+	background-image: url(question.png);
+	width:16px;
+	height:16px;
+}
+
+.info {	 font-style:italic;
+	 font-size:12px;
+	 padding-top:10px;
+	 color:#555;
+	 line-height:20px;
+}
+
+.error {	font-size:12px;
+	color:#E60000;
+	display:none;
+}
+
+.error_form {
+	background-color:#FFE8E8;
+	border:1px solid #E60000!important;
+}
+
+.success {	text-align:center;
+	color:#0B8C00;
+	font-size:15px;
+	padding:10px;
+}
+
+.naw {	border-bottom:1px solid #CCC;
+	padding:3px 0 3px 0;
+}
+
+.naw select {	margin:0 20px 0 5px;
+}
+
+.naw a {	display:inline-block;
+	padding:5px;	font-size:12px;
+	text-decoration:underline;
+	color:#031789;
+}
+
+.naw a:hover {
+	text-decoration:none;
+}

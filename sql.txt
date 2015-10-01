@@ -1,0 +1,206 @@
+-- phpMyAdmin SQL Dump
+-- version 4.2.7.1
+-- http://www.phpmyadmin.net
+--
+-- Хост: 127.0.0.1
+-- Время создания: Авг 24 2015 г., 13:57
+-- Версия сервера: 5.6.20
+-- Версия PHP: 5.5.15
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- База данных: `testovoe`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `language`
+--
+
+CREATE TABLE IF NOT EXISTS `language` (
+`id` int(10) NOT NULL,
+  `name` varchar(30) NOT NULL
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп данных таблицы `language`
+--
+
+INSERT INTO `language` (`id`, `name`) VALUES
+(1, 'Русский'),
+(2, 'English');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `translation`
+--
+
+CREATE TABLE IF NOT EXISTS `translation` (
+  `id_language` int(10) NOT NULL,
+  `key` varchar(50) NOT NULL,
+  `translation` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `translation`
+--
+
+INSERT INTO `translation` (`id_language`, `key`, `translation`) VALUES
+(1, 'month_1', 'Январь'),
+(1, 'month_2', 'Февраль'),
+(1, 'month_3', 'Март'),
+(1, 'month_4', 'Апрель'),
+(1, 'month_5', 'Май'),
+(1, 'month_6', 'Июнь'),
+(1, 'month_7', 'Июль'),
+(1, 'month_8', 'Август'),
+(1, 'month_9', 'Сентябрь'),
+(1, 'month_10', 'Октябрь'),
+(1, 'month_11', 'Ноябрь'),
+(1, 'month_12', 'Декабрь'),
+(1, 'month_0', 'Месяц'),
+(1, 'success', 'Регистрация успешно завершена, вы можете войти'),
+(1, 'authorize', 'Авторизация'),
+(1, 'login', 'Логин'),
+(1, 'pass', 'Пароль'),
+(1, 'pass_err', 'Ошибка! не верный пароль!'),
+(1, 'authorized', 'Вы уже авторизованы!'),
+(1, 'registerd', 'Вы уже зарегистрированы!'),
+(1, 'login_err_1', 'Логин должен состоять из латинских букв и/или цифр. Минимальная длина логина 6 символов.'),
+(1, 'login_err_2', 'Данный логин занят.'),
+(1, 'login_info', 'Логин - любое сочетание букв и/или цифр, необходимых для Вашей идентификации и авторизации на сайте. Логин должен состоять из латинских букв и/или цифр.'),
+(1, 'reg', 'Регистрация'),
+(1, 'y_name', 'Ваше Имя'),
+(1, 'this_row', 'Это поле обязательно для заполнения!'),
+(1, 'day_date', 'Дата рождения'),
+(1, 'number', 'Число'),
+(1, 'year', 'Год'),
+(1, 'day_error', 'Укажите день вашего рождения, формат ввода - число.'),
+(1, 'month_error', 'Выберите месяц вашего рождения.'),
+(1, 'year_error', 'Укажите год вашего рождения, формат ввода - число.'),
+(1, 'pol', 'Пол'),
+(1, 'm', 'Муж.'),
+(1, 'z', 'Жен.'),
+(1, 'pol_err', 'Укажите ваш пол.'),
+(1, 'photo', 'Фотография'),
+(1, 'select_file', 'Выберите файл!'),
+(1, 'file_info', 'Допустимые форматы изображения: JPEG, GIF, PNG. Максимальный размер одного изображения — 10 мегабайт.'),
+(1, 'about', 'Расскажите о себе'),
+(1, 'mail_err', 'Не верно указан Email!'),
+(1, 'mail_info', 'Поле e-mail используется для регистрации, а также для получения оповещений, поэтому используйте работающий адрес, которым Вы пользуетесь.'),
+(1, 'pass_err1', 'Пароль должен состоять из комбинации латинских букв и цифр! Минимальная длина пароля 6 символов.'),
+(1, 'pass_inf', 'Рекомендуемая длина пароля не менее 6 символов. Нельзя использовать одинаковый логин и пароль, или пароль, состоящий из одних цифр.'),
+(1, 'conf_pass', 'Повторите пароль'),
+(1, 'conf_pass_err', 'Введенные пароли не совпадают!'),
+(1, 'registr_info', 'Поля помеченные * звездочкой обязательны для заполнения.'),
+(1, 'personal', 'Персональные данные'),
+(1, 'logout', 'Выход'),
+(2, 'month_1', 'January'),
+(2, 'month_2', 'February'),
+(2, 'month_3', 'March'),
+(2, 'month_4', 'April'),
+(2, 'month_5', 'May'),
+(2, 'month_6', 'June'),
+(2, 'month_7', 'July'),
+(2, 'month_8', 'Augustus'),
+(2, 'month_9', 'September'),
+(2, 'month_10', 'October'),
+(2, 'month_11', 'November'),
+(2, 'month_12', 'December'),
+(2, 'month_0', 'Month'),
+(2, 'success', 'Registration successfully completed, you can enter'),
+(2, 'authorize', 'Authorization'),
+(2, 'login', 'Login'),
+(2, 'pass', 'Password'),
+(2, 'pass_err', 'Error! Incorrect password!'),
+(2, 'authorized', 'You are already logged in!'),
+(2, 'registerd', 'You already have an account!'),
+(2, 'login_err_1', 'Login should consist of letters and / or numbers. The minimum length of 6 characters username.'),
+(2, 'login_err_2', 'This login is not available.'),
+(2, 'login_info', 'Login - any combination of letters and / or numbers required for identification and authorization. Login should consist of letters and / or numbers.'),
+(2, 'reg', 'Registration'),
+(2, 'y_name', 'Your name'),
+(2, 'this_row', 'This field is required!'),
+(2, 'day_date', 'Date of Birth'),
+(2, 'number', 'Number'),
+(2, 'year', 'Year'),
+(2, 'day_error', 'Specify the day of your birth, the input format - number.'),
+(2, 'month_error', 'Choose the month of your birth.'),
+(2, 'year_error', 'Enter the year of your birth, the input format - number.'),
+(2, 'pol', 'Sex'),
+(2, 'm', 'Man'),
+(2, 'z', 'Woman'),
+(2, 'pol_err', 'Specify your gender'),
+(2, 'photo', 'Photo'),
+(2, 'select_file', 'Choose File!'),
+(2, 'file_info', 'Acceptable image formats: JPEG, GIF, PNG. The maximum size of a single image - 10 megabytes.'),
+(2, 'about', 'Tell us about yourself'),
+(2, 'mail_err', 'Not true Set Email!'),
+(2, 'mail_info', 'E-mail field is used to register and to receive notification, so use a working address, you use.'),
+(2, 'pass_err1', 'Password should consist of a combination of letters and numbers! Minimum password length of 6 characters.'),
+(2, 'pass_inf', 'Recommended password length of at least 6 characters. You can not use the same username and password, or a password consisting of numbers alone.'),
+(2, 'conf_pass', 'Repeat password'),
+(2, 'conf_pass_err', 'The entered passwords do not match!'),
+(2, 'registr_info', 'Fields marked with an asterisk * are required.'),
+(2, 'personal', 'Personal Information'),
+(2, 'logout', 'Exit');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+`id` int(10) NOT NULL,
+  `login` varchar(50) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `date` varchar(10) NOT NULL,
+  `pol` enum('man','woman') NOT NULL,
+  `photo` varchar(5) NOT NULL,
+  `info` text NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `reg_date` datetime NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `language`
+--
+ALTER TABLE `language`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `translation`
+--
+ALTER TABLE `translation`
+ ADD KEY `id_language` (`id_language`), ADD KEY `key` (`key`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`), ADD KEY `login` (`login`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `language`
+--
+ALTER TABLE `language`
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
